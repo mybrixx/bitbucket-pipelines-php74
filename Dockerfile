@@ -9,7 +9,7 @@ ENV HOME /root
 ARG MYSQL_ROOT_PASS=root
 
 # Cloudflare DNS
-RUN echo "nameserver 1.1.1.1" | tee /etc/resolv.conf > /dev/null
+RUN echo "nameserver 8.8.8.8" | tee /etc/resolv.conf > /dev/null
 
 RUN DEBIAN_FRONTEND=noninteractive apt-get update && \
     DEBIAN_FRONTEND=noninteractive apt-get upgrade -y && \
